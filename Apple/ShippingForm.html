@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ShippingForm</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Step 1: Personal Details</legend>
+            <label for="N">Name</label>
+            <input type="text" name="hihi"><br>
+            <label for="email">Email</label>
+            <input type="email" name="huikhoih"><br>
+            <label for="ph">Contact No.</label>
+            <input type="number" name="ph"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Step 2: Delivery Address</legend>
+            <label for="add">Address</label>
+            <textarea name="add" id="" cols="30" rows="10"></textarea><br>
+            <label for="pin">Zip code</label>
+            <input type="number" name="pin"><br>
+            <label for="count">Country</label>
+            <input list="count" placeholder="Please select country">
+
+            
+            <datalist id="count" name="count">
+            <!-- <select name="count" id="count"> -->
+                <option value="USA">United State of America</option>
+                <option value="IN">India</option>
+                <option value="CH">China</option>
+                <option value="LN">London</option>
+                <option value="JP">Japan</option>
+                <option value="AF">South Africa</option>
+                <option value="NZ">Newzealand</option>
+                <option value="AU">Australia</option>
+            <!-- </select> -->
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Step 3: Card Details</legend>
+            <label for="ct">Card Type</label>
+            <input type="radio" name="ct" id="card1" value="visa">Visa
+            <input type="radio" name="ct" id="card2" value="Amex">Amex
+            <input type="radio" name="ct" id="card3" value="Master">Master<br>
+            <label for="cn">Card Number</label>
+            <input type="number" name="cn" id=""><br>
+            <label for="sc">Security Code</label>
+            <input type="number" name="sc" id=""><br>
+            <label for="cd">Name on the card</label>
+            <input type="text" name="cd" id="">
+        </fieldset>
+
+        <input type="sub" value="Submit">
+    </form>
+</body>
+</html>
