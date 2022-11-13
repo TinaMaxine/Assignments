@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{animation: slow 20s infinite linear;}
+        @keyframes slow {
+          0%{
+background-color: rgb(233, 177, 201)          ;
+        }
+        25% {background-color: rgb(3, 116, 181)
+       ;
+        }
+        50% {background-color: rgb(9, 106, 106)
+               }
+        100% {background-color: rgb(12, 145, 145)
+          }
+    
+
+
+          }
+          
+        
+
+        .login {
+            font-size: 200px;
+	font-weight: 700;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-color: rgb(44, 44, 8);    
+    margin-left: 450px;
+    margin-top: -50px;
+    animation: login 5s infinite
+    
+}
+@keyframes login {
+    0% {background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+          background-image: url(/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
+        }
+        25% {background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+          background-image: url(/alexandre-guimont-S9miGKjxmb4-unsplash.jpg);
+        }
+        50% {background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+          background-image: url(/annie-spratt-zh7GEuORbUw-unsplash.jpg);
+        }
+        100% {background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+          background-image: url(/christopher-burns-Kj2SaNHG-hg-unsplash.jpg);
+        }
+    
+
+}
+#hi{font-size: 50px;
+  margin-left: 550px;
+
+}
+
+#ok{
+border: 3px solid blue;    margin-top: 80px;
+  
+    
+  font-size: 40px;
+  margin-left: 40px;
+}
+#ok1{border: 3px solid blue;
+  margin-top: 50px;
+    
+  font-size: 40px;
+  margin-left: 50px;
+}
+#ok2{border: 3px solid blue;
+    margin-top: 50px;
+    
+  font-size: 40px;
+  margin-left: 130px;
+}
+
+button{
+    font-size: 50px;
+    margin-left: 800px;
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+button:hover{
+    
+    animation: mohit 5s infinite ;
+}
+@keyframes mohit {
+    0% { color: rgb(188, 17, 17);
+          background-color: rgb(101, 223, 223);
+        }
+        25% { color: rgb(43, 200, 137);
+          background-color: rgb(249, 139, 139);
+        }
+        50% { color: rgb(15, 149, 156);
+          background-color: rgb(198, 250, 109);
+        }   
+        100% { color: rgb(246, 255, 0);
+          background-color: rgb(86, 73, 84);
+        }
+      }
+    
+.spin{
+  border: 8px solid rgb(79, 79, 150);
+  border-bottom-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  animation: spinner 1s linear infinite ;
+  margin-left: 1000px;
+  margin-top: -60px;
+}
+
+
+@keyframes spinner {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+  
+}
+.waiting{
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 1000px;
+}
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="login">Login page</div>
+        <label id="hi" class="login"   for="">Username</label>
+        <input id="ok" type="text" name="n" placeholder="Username"><br>
+        
+        <label id="hi" class="login"   for="pass">Password</label>
+        <input id="ok1" type="password" name="pass"placeholder="Password"><br>
+        <label id="hi" class="login"  for="email">Email</label>
+        <input id="ok2" type="email" name="email"placeholder="Email"><br>
+        
+       
+
+    </form>
+    <button>Submit</button>
+    <div class="spin"></div>
+<div class="waiting">Waiting for network</div>
+</body>
+</html>
