@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login page</title>
+  <!-- for fontAwesome icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <style>
 	body {
-    background-image: linear-gradient(135deg, #faffb2 10%, #6ced11 100%);
+    background-image: linear-gradient(135deg, #faffb2 10%, #86e742 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,6 +19,7 @@
   .box-form {
     margin: 0 auto;
     width: 80%;
+	/* height: 40%; */
     background: #FFFFFF;
     border-radius: 10px;
     overflow: hidden;
@@ -26,7 +29,7 @@
     justify-content: space-between;
     box-shadow: 0 0 20px 6px #fa890085;
   }
-  /*media qquery*/
+  /*media qquery for screens of width 980px or less*/
   @media (max-width: 980px) {
     .box-form {
       flex-flow: wrap;
@@ -42,43 +45,58 @@
     color: #FFFFFF;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./со-нцецветы-в-корзине-33831938.jpg");
+    background-image: url("https://www.kidsdogardening.com/wp-content/uploads/2020/03/AdobeStock_45549555-scaled.jpeg");
     overflow: hidden;
   }
   .box-form .left .overlay {
     padding: 30px;
     width: 100%;
     height: 100%;
-    background: #3fb500ad;
+    background: #60d222ad;
     overflow: hidden;
     box-sizing: border-box;
   }
   .box-form .left .overlay h1 {
-    font-size: 10vmax;
+    font-size: 8vmax;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 550;
     margin-top: 40px;
     margin-bottom: 20px;
   }
+  /* .box-form .left .overlay .wait{
+	
+  } */
   .box-form .left .overlay span p {
     margin-top: 30px;
-    font-weight: 700;
+    font-weight: 800;
+
   }
   .box-form .left .overlay span a {
-    background: #3b5998;
+    /* background: #3b5998; */
     color: #FFFFFF;
     margin-top: 10px;
-    padding: 14px 50px;
+	/* margin-left: 120px; */
+    padding: 14px 30px;
     border-radius: 100px;
-    display: inline-block;
+    display:inline-block;
     box-shadow: 0 3px 6px 1px #fa890085;
+	
   }
-  .box-form .left .overlay span a:last-child {
+  .box-form .left .overlay span a:nth-child(2) {
+    background: #3b5998;
+    /* margin-left: 180px; */
+  }
+  .box-form .left .overlay span a:nth-child(3) {
     background: #1dcaff;
     margin-left: 30px;
   }
+  .box-form .left .overlay span a:nth-child(4){
+	background: #ff1d4e;
+    margin-left: 30px;
+  }
+  
   .box-form .right {
-    padding: 60px;
+    padding: 40px;
     overflow: hidden;
   }
   @media (max-width: 980px) {
@@ -87,7 +105,7 @@
     }
   }
   .box-form .right h5 {
-    font-size: 6vmax;
+    font-size: 5vmax;
     line-height: 0;
   }
   .box-form .right p {
@@ -116,13 +134,19 @@
     margin-right: 7px;
     width: auto;
   }
+  .box-form .right .remember-me--forget-password p a{
+	font-size: 14px;
+	color:#00ff00;
+  }
   .box-form .right button {
-    /* float: right; */
+    float: right;
     color: #fff;
     font-size: 16px;
     padding: 12px 35px;
     border-radius: 50px;
-    display: inline-block;
+    /* position: relative;
+	left:80px; */
+	display: inline-block;
     border: 0;
     outline: 0;
     box-shadow: 0px 8px 20px 0px #49c628a6;
@@ -131,11 +155,40 @@
   
   label {
     display: block;
-    position: absolute;
-    margin-left: 15px;
+    position: relative;
+    margin-left: 30px;
   }
-  
-
+  label::before {
+    content: ' \f00c';
+    position: absolute;
+    font-family: FontAwesome;
+    background: transparent;
+    border: 3px solid #70F570;
+    border-radius: 4px;
+    color: transparent;
+    left: -30px;
+    transition:all 0.2s linear;
+  }
+  label:hover::before {
+    font-family: FontAwesome;
+    content: ' \f00c';
+    color: #fff;
+    cursor:pointer;
+    background: #70F570;
+  }
+  label:hover::before .text-checkbox {
+    background: #70F570;
+  }
+  label span.text-checkbox {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  label input[type="checkbox"] {
+    display: none;
+  }
   .box-form .right .loader {
     float: right;
     border: 3px solid rgb(255, 255, 255);
@@ -144,12 +197,22 @@
     /* border-image:linear-gradient(135deg, #70F570 10%, #49C628 100%) ; */
     border-top: 3px solid #2be52b;
     border-bottom:3px solid #2be52b ;
-    width: 20px;
-    height: 20px;
-    animation: spin 2s linear infinite;
-    margin-top: 7px;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    margin-top: 12px;
+	position: relative;
+	left: 100px;
+	top:40px;
   }
-  
+  /* @media (max-width: 980px) {
+    .box-form .right .loader{
+      flex-flow: wrap;
+      text-align: center;
+      align-content: center;
+      align-items: center;
+    }
+  } */
   
   @keyframes spin {
     0% { transform: rotate(0deg); 
@@ -166,29 +229,38 @@
     color: rgb(250, 250, 250); }
   }
   .box-form .right .network{
-    font-size: 13px;
-    margin-top: 10px;
-    float: right;
+	float: right;
+    font-size: 14px;
+	/* position:inherit; */
+	margin-top: 30px;
+	position: relative;
+	top:25px;
+	left:70px;
+	/* color: #00ff00; */
+    /* margin-top: 10px; */
+    /* float: right; */
+	color: #b9b0b8;
   }
   </style>
 <body>
 <div class="box-form">
 	<div class="left">
 		<div class="overlay">
-		<h1>Hi Welcome</h1>
+		<h1>Hello World</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Curabitur et est sed felis aliquet sollicitudin</p>
-		<span>
-			<p>Do you want to Login with social media?</p>
-			<a href="https://www.facebook.com/login/"><i class="fb" aria-hidden="true"></i>Login with facebook</a>
-			<a href="https://twitter.com/login"><i class="twitter" aria-hidden="true"></i> Login with Twitter</a>
+		<span class="want">
+			<p>Login with social media!</p>
+			<a href="https://www.facebook.com/login/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="https://twitter.com/login"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://accounts.google.com/"><i class="fa fa-google" aria-hidden="true"></i></a>
 		</span>
 		</div>
 	</div>
 	
 		<div class="right">
 		<h5>Login</h5>
-		<p>Don't have an account? <a href="https://support.google.com/accounts/answer/27441?hl=en">Signup!</a> It takes less than a minute</p>
+		<p>Don't have an account? <a href="https://support.google.com/accounts/answer/27441?hl=en" style="color:#00ff00">Signup!</a> It takes less than a minute</p>
 		<div class="inputs">
 			<input type="text" placeholder="username">
 			<br>
@@ -197,10 +269,12 @@
 			
 			<br><br>
 			
-		<div class="remember-me--forget-password">
-			<input type="checkbox" id="rmbr1" name="item" value="rmbr" style="color: #50e112">
-			<label for="rmbr1"> Remember Me</label>
-			<p><a href="#">forgot password?</a></p>
+			<div class="remember-me--forget-password">
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label>
+			<p><a href="#"> forgot password?</a></p>
 		</div>
 			
 			<br>
